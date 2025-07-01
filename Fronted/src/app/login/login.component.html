@@ -1,0 +1,26 @@
+<div class="login-container">
+    <div class="form-card">
+      <h2><b>Facebook</b></h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email or Phone Number</label>
+          <input type="text" id="email" formControlName="email" required />
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+            Please enter a valid email or phone number.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" required />
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+            Password is required.
+          </div>
+        </div>
+        <button type="submit" class="btn" [disabled]="loginForm.invalid">Log In</button>
+      </form>
+      <div class="switch-page">
+        <p>Don't have an account? <a routerLink="/signup">Create one</a></p>
+      </div>
+    </div>
+  </div>
+  

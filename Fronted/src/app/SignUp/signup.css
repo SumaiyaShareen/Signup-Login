@@ -1,0 +1,140 @@
+/* Container background */
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card styling */
+.signup-card {
+  background-color: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Header text */
+.signup-header h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+}
+
+.signup-header p {
+  text-align: center;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.signup-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+.signup-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Button */
+.signup-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-form button:disabled {
+  background-color: #a3c0f3;
+  cursor: not-allowed;
+}
+
+.signup-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Feedback */
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+/* Alert styling */
+.alert {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Link to login */
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
